@@ -13,3 +13,14 @@ cat ilf.2 | wc -l
 Search for all lines that contain a word that starts with Permit.
 grep -i '\bPermit\w*' ./sshd_config
 
+Запуск демона
+systemctl start ssh
+
+Проверка статуса демон-потока
+systemctl status ssh
+
+Запуск демон-потока после запуска пк
+systemctl enable ssh
+
+
+
