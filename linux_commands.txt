@@ -22,5 +22,25 @@ systemctl status ssh
 Запуск демон-потока после запуска пк
 systemctl enable ssh
 
+list-units отображает активные потоки в данный момент, list-unit-files отображает все потоки
+systemctl list-units --type=service
+systemctl list-unit-files --type=service --state=enabled
+
+Выводит логи (в данном случае для конкретного сервиса)
+journalctl -u ssh.service --no-pager
+
+Обе команды выводят запущенные процессы, но первая выводит как системные, так и пользовательские процессы, а вторая только системные процессы
+ps -aux 
+systemctl list-units --type=service
+
+Показывает только фоновые процессы, запущенные из текущего терминала (не глобальные)
+jobs
+
+Ввести процесс в фоновый режим
+bg 
+
+Вывести процесс из фонового режима
+fg <ID> 
+
 
 
