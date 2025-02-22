@@ -71,6 +71,22 @@ ping <remote_host>
 Отправляет пакеты на хост и отслеживает через какие ip адреса они проходят
 traceroute www.inlanefreight.com
 
+Запуск приложения с графическим интерфейсом благодаря XServer
+ssh -X htb-student@10.129.23.11 /usr/bin/firefox
+
+Создание туннеля для vcn-server (для графического взаимодействия с сервером)
+ssh -L 5901:127.0.0.1:5901 -N -f -l htb-student 10.129.14.130
+
+Журнал ядра
+/var/log/kern.log
+
+Системный журнал
+/var/log/syslog
+
+Журнал аутентификации
+/var/log/auth.log
+
+
 
 
 
